@@ -1,0 +1,130 @@
+{
+	"Number of Parameters":2,
+	"Data Sets":[
+{
+	"Parameters": [ 0.0, 0.0 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out1.wav"
+},
+{
+	"Parameters": [ 0.0, 0.25 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out2.wav"
+},
+{
+	"Parameters": [ 0.0, 0.5 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out3.wav"
+},
+{
+	"Parameters": [ 0.0, 0.75 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out4.wav"
+},
+{
+	"Parameters": [ 0.0, 1.0 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out5.wav"
+},
+{
+	"Parameters": [ 0.25, 0.0 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out6.wav"
+},
+{
+	"Parameters": [ 0.25, 0.25 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out7.wav"
+},
+{
+	"Parameters": [ 0.25, 0.5 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out8.wav"
+},
+{
+	"Parameters": [ 0.25, 0.75 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out9.wav"
+},
+{
+	"Parameters": [ 0.25, 1.0 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out10.wav"
+},
+{
+	"Parameters": [ 0.5, 0.0 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out11.wav"
+},
+{
+	"Parameters": [ 0.5, 0.25 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out12.wav"
+},
+{
+	"Parameters": [ 0.5, 0.5 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out13.wav"
+},
+{
+	"Parameters": [ 0.5, 0.75 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out14.wav"
+},
+{
+	"Parameters": [ 0.5, 1.0 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out15.wav"
+},
+{
+	"Parameters": [ 0.75, 0.0 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out16.wav"
+},
+{
+	"Parameters": [ 0.75, 0.25 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out17.wav"
+},
+{
+	"Parameters": [ 0.75, 0.5 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out18.wav"
+},
+{
+	"Parameters": [ 0.75, 0.75 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out19.wav"
+},
+{
+	"Parameters": [ 0.75, 1.0 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out20.wav"
+},
+{
+	"Parameters": [ 1.0, 0.0 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out21.wav"
+},
+{
+	"Parameters": [ 1.0, 0.25 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out22.wav"
+},
+{
+	"Parameters": [ 1.0, 0.5 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out23.wav"
+},
+{
+	"Parameters": [ 1.0, 0.75 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out24.wav"
+},
+{
+	"Parameters": [ 1.0, 1.0 ],
+	"TrainingClean": "Data/Proteus_Capture.wav",
+	"TrainingTarget": "../out25.wav"
+}
+]
+}
