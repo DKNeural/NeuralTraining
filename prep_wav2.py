@@ -3,6 +3,7 @@ import argparse
 import numpy as np
 import random
 import json
+import gc
 
 def save_wav(name, data):
     wavfile.write(name, 44100, data.flatten().astype(np.float32))
@@ -286,6 +287,9 @@ def conditionedWavParse(args):
         all_target_train = np.append(all_target_train, out_train)
         all_target_val = np.append(all_target_val, out_val)
         all_target_test = np.append(all_target_test, out_test)
+
+        del in_data, out_data, clean_data, target_data, in_train, out_train, in_val, out_val, in_test, out_test
+        gc.collect()
 
     # Save the wav files 
     save_wav_dont_flatten(args.path + "/train/" + args.name + "-input.wav", all_clean_train.T)
