@@ -171,10 +171,10 @@ def conditionedWavParse(args):
     # Load and Preprocess Data ###########################################
     all_clean_train = np.array([[]]*(params+1)) # 1 channel for audio, n channels per parameters
     all_clean_val = np.array([[]]*(params+1)) # 1 channel for audio, n channels per parameters
-    all_clean_test = np.array([[]]*(params+1)) # 1 channel for audio, n channels per parameters
+    #all_clean_test = np.array([[]]*(params+1)) # 1 channel for audio, n channels per parameters
     all_target_train = np.array([[]]) # 1 channels of all (out audio)
     all_target_val = np.array([[]]) # 1 channels of all (out audio)
-    all_target_test = np.array([[]]) # 1 channels of all (out audio)
+    #all_target_test = np.array([[]]) # 1 channels of all (out audio)
 
 
     for ds in data["Data Sets"]:
@@ -247,28 +247,28 @@ def conditionedWavParse(args):
                 in_test = normalize(in_test).reshape(len(test_in_data),1)
                 out_test = normalize(out_test).reshape(len(test_out_data),1)
         else:
-            in_test = in_val
-            out_test = out_val
-            if (args.normalize):
-                in_test = normalize(in_test).reshape(len(in_test),1)
-                out_test = normalize(out_test).reshape(len(in_test),1)
+            #in_test = in_val
+            #out_test = out_val
+            #if (args.normalize):
+                #in_test = normalize(in_test).reshape(len(in_test),1)
+                #out_test = normalize(out_test).reshape(len(in_test),1)
 
         # Initialize lists to handle the number of parameters
         params_train = []
         params_val = []
-        params_test = []
+        #params_test = []
 
         # Create a list of np arrays of the parameter values
         for val in ds["Parameters"]:
             # Create the parameter arrays
             params_train.append(np.array([val]*len(in_train)))
             params_val.append(np.array([val]*len(in_val)))
-            params_test.append(np.array([val]*len(in_test)))
+            #params_test.append(np.array([val]*len(in_test)))
 
         # Convert the lists to numpy arrays
         params_train = np.array(params_train)
         params_val = np.array(params_val)
-        params_test = np.array(params_test)
+        #params_test = np.array(params_test)
 
         #print(np.array([in_train.flatten()]).shape)
         #print(params_train.shape)
@@ -277,28 +277,28 @@ def conditionedWavParse(args):
         if (args.normalize):
             in_train = np.array([in_train.flatten()])
             in_val = np.array([in_val.flatten()])
-            in_test = np.array([in_test.flatten()])
+            #in_test = np.array([in_test.flatten()])
         
         # Append the audio and paramters to the full data sets 
         all_clean_train = np.append(all_clean_train, np.append(in_train,params_train, axis=0), axis = 1)
         all_clean_val = np.append(all_clean_val , np.append(in_val,params_val, axis=0), axis = 1)
-        all_clean_test = np.append(all_clean_test , np.append(in_test,params_test, axis=0), axis = 1)
+        #all_clean_test = np.append(all_clean_test , np.append(in_test,params_test, axis=0), axis = 1)
 
         all_target_train = np.append(all_target_train, out_train)
         all_target_val = np.append(all_target_val, out_val)
-        all_target_test = np.append(all_target_test, out_test)
+        #all_target_test = np.append(all_target_test, out_test)
 
-        del in_data, out_data, clean_data, target_data, in_train, out_train, in_val, out_val, in_test, out_test
+        del in_data, out_data, clean_data, target_data, in_train, out_train, in_val, out_val
         gc.collect()
 
     # Save the wav files 
     save_wav_dont_flatten(args.path + "/train/" + args.name + "-input.wav", all_clean_train.T)
     save_wav_dont_flatten(args.path + "/val/" + args.name + "-input.wav", all_clean_val.T)
-    save_wav_dont_flatten(args.path + "/test/" + args.name + "-input.wav", all_clean_test.T)
+    #save_wav_dont_flatten(args.path + "/test/" + args.name + "-input.wav", all_clean_test.T)
 
     save_wav(args.path + "/train/" + args.name + "-target.wav", all_target_train)
     save_wav(args.path + "/val/" + args.name + "-target.wav", all_target_val)
-    save_wav(args.path + "/test/" + args.name + "-target.wav", all_target_test)
+    #save_wav(args.path + "/test/" + args.name + "-target.wav", all_target_test)
 
 
 
