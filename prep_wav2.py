@@ -237,16 +237,16 @@ def conditionedWavParse(args):
 
         # Process the Test Data. If it's a separate set, process that set. 
         # If there is not a separeate set, use the validation data for testing.
-        if (seprateTestSet):
-            test_in_rate, test_in_data = wavfile.read(ds["TestClean"])
-            test_out_rate, test_out_data = wavfile.read(ds["TestTarget"])
-            in_test = test_in_data.astype(np.float32).flatten()
-            out_test = test_out_data.astype(np.float32).flatten()
+       # if (seprateTestSet):
+           # test_in_rate, test_in_data = wavfile.read(ds["TestClean"])
+           # test_out_rate, test_out_data = wavfile.read(ds["TestTarget"])
+           # in_test = test_in_data.astype(np.float32).flatten()
+            #out_test = test_out_data.astype(np.float32).flatten()
 
-            if (args.normalize):
-                in_test = normalize(in_test).reshape(len(test_in_data),1)
-                out_test = normalize(out_test).reshape(len(test_out_data),1)
-        else:
+            #if (args.normalize):
+                #in_test = normalize(in_test).reshape(len(test_in_data),1)
+                #out_test = normalize(out_test).reshape(len(test_out_data),1)
+        #else:
             #in_test = in_val
             #out_test = out_val
             #if (args.normalize):
