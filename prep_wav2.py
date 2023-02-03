@@ -224,8 +224,8 @@ def conditionedWavParse(args):
         if (args.normalize):
             clean_data = normalize(clean_data).reshape(len(clean_data),1)
             target_data = normalize(target_data).reshape(len(target_data),1)
-            in_test = normalize(in_test).reshape(len(test_in_data),1)
-            out_test = normalize(out_test).reshape(len(test_out_data),1)
+            #in_test = normalize(in_test).reshape(len(test_in_data),1)
+            #out_test = normalize(out_test).reshape(len(test_out_data),1)
 
         # Make the Training and validation split
         if args.random_split:
