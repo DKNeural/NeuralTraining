@@ -113,6 +113,7 @@ def analyze_pred_vs_actual(args):
     ax3.grid("on")
 
     # Save the plot
+    print(path+'/'+model_name + "_signal_comparison_e2s_" + str(round(e2s, 4)))
     plt.savefig(path+'/'+model_name + "_signal_comparison_e2s_" + str(round(e2s, 4)) + ".png", bbox_inches="tight")
 
     # Create a zoomed in plot of 0.01 seconds centered at the max input signal value
