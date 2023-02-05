@@ -92,6 +92,7 @@ def analyze_pred_vs_actual(args):
     #    used to train the model
     e2s = error_to_signal(signal1, signal2)
     e2s_no_filter = error_to_signal(signal1, signal2, use_filter=0)
+    print(path+'/'+model_name + "_signal_comparison_e2s_" + str(round(e2s, 4)))
     print("Error to signal (with pre-emphasis filter): ", e2s)
     print("Error to signal (no pre-emphasis filter): ", e2s_no_filter)
     fig.suptitle("Predicted vs Actual Signal (error to signal: " + str(round(e2s, 4)) + ")")
